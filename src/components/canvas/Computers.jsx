@@ -47,7 +47,8 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
-
+try {
+  
   return (
     <Canvas
       frameloop="demand"
@@ -67,6 +68,9 @@ const ComputersCanvas = () => {
       </Suspense>
     </Canvas>
   );
+} catch (error) {
+  <h2>This Device Cant load 3D model</h2>
+}
 };
 
 export default ComputersCanvas;
